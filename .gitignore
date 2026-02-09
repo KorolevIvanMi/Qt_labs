@@ -79,3 +79,26 @@ CMakeLists.txt.user*
 # --------
 *.dll
 *.exe
+
+# CMake build files
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Qt files
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.qrc.d
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
