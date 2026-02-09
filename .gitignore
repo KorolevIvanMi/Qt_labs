@@ -79,3 +79,25 @@ CMakeLists.txt.user*
 # --------
 *.dll
 *.exe
+
+# CMake build directories
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+*.user
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Testing
+Testing/
+test-results/
