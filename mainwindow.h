@@ -20,9 +20,13 @@ public:
 
     int Summa(int a, int b);
     int Substruct(int a, int b);
+    int Multiply(int a, int b);
+    double Devision(int a, int b);
 
     void on_addBtn_clicked();
     void on_subBtn_clicked();
+    void on_multBtn_clicked();
+    void on_devBtn_clicked();
 
 
 

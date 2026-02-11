@@ -13,7 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->subBtn, &QPushButton::clicked, this,
             &MainWindow::on_subBtn_clicked);
 
+    connect(ui->multBtn, &QPushButton::clicked, this,
+            &MainWindow::on_multBtn_clicked);
 
+    connect(ui->devBtn, &QPushButton::clicked, this,
+            &MainWindow::on_devBtn_clicked);
 }
 
 
@@ -30,6 +34,16 @@ int MainWindow::Summa(int a, int b){
 
 int MainWindow::Substruct(int a, int b){
     return a-b;
+}
+
+
+int MainWindow::Multiply(int a , int b){
+    return a*b;
+}
+
+
+double MainWindow::Devision(int a, int b){
+    return static_cast<double>(a)/static_cast<double>(b);
 }
 
 
@@ -57,4 +71,27 @@ void MainWindow::on_subBtn_clicked(){
     ui->resultEdit->setText(result);
 }
 
+
+void MainWindow::on_multBtn_clicked(){
+    int num1 = ui->lineNum1->text().toInt();
+    int num2 = ui->lineNum2->text().toInt();
+
+    int mult = Multiply(num1, num2);
+    QString result;
+    result.setNum(mult);
+
+    ui->resultEdit->setText(result);
+}
+
+
+void MainWindow::on_devBtn_clicked(){
+    int num1 = ui->lineNum1->text().toInt();
+    int num2 = ui->lineNum2->text().toInt();
+
+    double dev = Devision(num1, num2);
+    QString result;
+    result.setNum(dev);
+
+    ui->resultEdit->setText(result);
+}
 
