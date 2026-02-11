@@ -6,16 +6,35 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    connect(ui->addBtn, &QPushButton::clicked, this,
+            &MainWindow::on_addBtn_clicked);
 }
+
+
+
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    ui->label->setText(ui->lineEdit->text());
-    ui->lineEdit->clear();
+int MainWindow::Summa(int a, int b){
+    return a + b;
 }
+
+
+
+void MainWindow::on_addBtn_clicked(){
+    int num1 = ui->lineNum1->text().toInt();
+    int num2 = ui->lineNum2->text().toInt();
+
+    int summa = Summa(num1, num2);
+    QString result;
+    result.setNum(summa);
+    ui->resultEdit->setText(result);
+
+}
+
 

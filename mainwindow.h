@@ -13,12 +13,18 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_pushButton_clicked();
+    int Summa(int a, int b);
+    int Substruct(int a, int b);
+
+    void on_addBtn_clicked();
+
+
+
 
 private:
     Ui::MainWindow *ui;
