@@ -22,7 +22,7 @@ public:
     int Substruct(int a, int b);
 
     void on_addBtn_clicked();
-
+    void on_subBtn_clicked();
 
 
 
@@ -30,3 +30,6 @@ private:
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
+
+
+
