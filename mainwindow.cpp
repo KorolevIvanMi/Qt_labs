@@ -7,10 +7,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->addBtn, SIGNAL(clicked()), this,SLOT(on_addBtn_clicked()));
-    connect(ui->subBtn, SIGNAL(clicked()), this,SLOT(on_subBtn_clicked()));
-    connect(ui->multBtn, SIGNAL(clicked()), this,SLOT(on_multBtn_clicked()));
-    connect(ui->devBtn, SIGNAL(clicked()), this,SLOT(on_devBtn_clicked()));
+    connect(ui->addBtn, &QPushButton::clicked, this,&MainWindow::on_addBtn_clicked);
+    connect(ui->subBtn, &QPushButton::clicked, this,&MainWindow::on_subBtn_clicked);
+    connect(ui->multBtn, &QPushButton::clicked, this,&MainWindow::on_multBtn_clicked);
+    connect(ui->devBtn, &QPushButton::clicked, this,&MainWindow::on_devBtn_clicked);
+    connect(ui->lineNum1, &QLineEdit::textEdited, this, &MainWindow::on_numsTxt_changed);
+    connect(ui->lineNum2, &QLineEdit::textEdited, this, &MainWindow::on_numsTxt_changed);
 }
 
 
@@ -93,5 +95,9 @@ void MainWindow::on_devBtn_clicked(){
         ui->resultEdit->setText(QString("Ошибка: %1").arg(e.what()));
     }
 
+}
+
+void MainWindow::on_numsTxt_changed(){
+    ui->resultEdit->clear();
 }
 

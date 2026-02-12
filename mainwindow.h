@@ -22,14 +22,14 @@ public:
     int Substruct(int a, int b);
     int Multiply(int a, int b);
     double Devision(int a, int b);
+    bool is_numTxts_empty();
 
 
-
-private slots:
     void on_addBtn_clicked();
     void on_subBtn_clicked();
     void on_multBtn_clicked();
     void on_devBtn_clicked();
+    void on_numsTxt_changed();
 
 private:
     Ui::MainWindow *ui;
