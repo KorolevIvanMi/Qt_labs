@@ -23,12 +23,13 @@ public:
     int Multiply(int a, int b);
     double Devision(int a, int b);
 
+
+
+private slots:
     void on_addBtn_clicked();
     void on_subBtn_clicked();
     void on_multBtn_clicked();
     void on_devBtn_clicked();
-
-
 
 private:
     Ui::MainWindow *ui;

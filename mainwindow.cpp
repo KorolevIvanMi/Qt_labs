@@ -7,17 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->addBtn, &QPushButton::clicked, this,
-            &MainWindow::on_addBtn_clicked);
-
-    connect(ui->subBtn, &QPushButton::clicked, this,
-            &MainWindow::on_subBtn_clicked);
-
-    connect(ui->multBtn, &QPushButton::clicked, this,
-            &MainWindow::on_multBtn_clicked);
-
-    connect(ui->devBtn, &QPushButton::clicked, this,
-            &MainWindow::on_devBtn_clicked);
+    connect(ui->addBtn, SIGNAL(clicked()), this,SLOT(on_addBtn_clicked()));
+    connect(ui->subBtn, SIGNAL(clicked()), this,SLOT(on_subBtn_clicked()));
+    connect(ui->multBtn, SIGNAL(clicked()), this,SLOT(on_multBtn_clicked()));
+    connect(ui->devBtn, SIGNAL(clicked()), this,SLOT(on_devBtn_clicked()));
 }
 
 
@@ -43,6 +36,9 @@ int MainWindow::Multiply(int a , int b){
 
 
 double MainWindow::Devision(int a, int b){
+    if (b == 0){
+        throw std::runtime_error("Деление на 0");
+    }
     return static_cast<double>(a)/static_cast<double>(b);
 }
 
@@ -87,11 +83,15 @@ void MainWindow::on_multBtn_clicked(){
 void MainWindow::on_devBtn_clicked(){
     int num1 = ui->lineNum1->text().toInt();
     int num2 = ui->lineNum2->text().toInt();
-
-    double dev = Devision(num1, num2);
     QString result;
-    result.setNum(dev);
+    try{
+        double dev = Devision(num1, num2);
+        result.setNum(dev);
+        ui->resultEdit->setText(result);
+    }
+    catch(const std::runtime_error& e){
+        ui->resultEdit->setText(QString("Ошибка: %1").arg(e.what()));
+    }
 
-    ui->resultEdit->setText(result);
 }
 
