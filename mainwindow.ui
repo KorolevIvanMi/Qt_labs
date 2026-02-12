@@ -14,7 +14,7 @@
    <string>Королев Иван 4431</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -75,6 +75,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <widget class="QPushButton" name="addBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="font">
           <font>
            <pointsize>50</pointsize>
@@ -100,6 +103,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="subBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="font">
           <font>
            <pointsize>50</pointsize>
@@ -125,6 +131,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="multBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="font">
           <font>
            <pointsize>50</pointsize>
@@ -150,6 +159,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="devBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="font">
           <font>
            <pointsize>50</pointsize>

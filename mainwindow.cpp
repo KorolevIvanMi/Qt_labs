@@ -45,6 +45,18 @@ double MainWindow::Devision(int a, int b){
 }
 
 
+bool MainWindow::is_numTxts_empty(){
+    bool res = false;
+    if (ui->lineNum1->text() == "" or ui->lineNum1->text() == " " or ui->lineNum2->text() == "" or ui->lineNum2->text() == " " ){
+        res = false;
+    }
+    else{
+        res = true;
+    }
+    return res;
+}
+
+
 void MainWindow::on_addBtn_clicked(){
     int num1 = ui->lineNum1->text().toInt();
     int num2 = ui->lineNum2->text().toInt();
@@ -98,6 +110,20 @@ void MainWindow::on_devBtn_clicked(){
 }
 
 void MainWindow::on_numsTxt_changed(){
+    bool make_btns_available;
+    make_btns_available = is_numTxts_empty();
+    if (make_btns_available){
+        ui->subBtn->setEnabled(true);
+        ui->addBtn->setEnabled(true);
+        ui->multBtn->setEnabled(true);
+        ui->devBtn->setEnabled(true);
+    }
+    else{
+        ui->subBtn->setEnabled(false);
+        ui->addBtn->setEnabled(false);
+        ui->multBtn->setEnabled(false);
+        ui->devBtn->setEnabled(false);
+    }
     ui->resultEdit->clear();
 }
 
