@@ -26,6 +26,8 @@ public:
     void on_lightsChb_checked(int state);
     void on_resultBtn_released();
 
+    void component_unchecked(QPixmap component_image, int component_index);
+    void component_checked(QPixmap component_image, int component_index);
 
 
 private:

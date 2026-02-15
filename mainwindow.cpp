@@ -24,25 +24,34 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::component_unchecked(QPixmap component_image, int component_index){
+    if (ui->imageLbl->pixmap().cacheKey() == component_image.cacheKey()){
+        ui->imageLbl->clear();
+    }
+    total_price -= componentsPrices[component_index];
+    selectedConponents[component_index] = "";
+}
+
+
+void MainWindow::component_checked(QPixmap component_image, int component_index){
+    ui->imageLbl->setPixmap(component_image);
+
+    total_price += componentsPrices[component_index];
+
+    QString name;
+    name = ui->tiresChb->text();
+    selectedConponents[component_index] = name;
+}
+
+
 void MainWindow::on_tiresChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/vidy.jpg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[0];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[0] = name;
-
+        component_checked(image, 0);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[0];
-        selectedConponents[0] = "";
+        component_unchecked(image, 0);
     }
 
 }
@@ -52,21 +61,10 @@ void MainWindow::on_discsChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/discs.jpeg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[1];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[1] = name;
-
+        component_checked(image, 1);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[1];
-        selectedConponents[1] = "";
+        component_unchecked(image, 1);
     }
 }
 
@@ -75,20 +73,10 @@ void MainWindow::on_cascoChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/casco.jpeg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[2];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[2] = name;
+        component_checked(image, 2);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[2];
-        selectedConponents[2] = "";
+        component_unchecked(image, 2);
     }
 }
 
@@ -97,20 +85,10 @@ void MainWindow::on_osagoChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/osago.png");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[3];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[3] = name;
+        component_checked(image, 3);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[3];
-        selectedConponents[3] = "";
+        component_unchecked(image, 3);
     }
 }
 
@@ -119,20 +97,10 @@ void MainWindow::on_condChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/cond.jpeg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[4];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[4] = name;
+        component_checked(image, 4);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[4];
-        selectedConponents[4] = "";
+        component_unchecked(image, 4);
     }
 }
 
@@ -141,20 +109,10 @@ void MainWindow::on_signChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/sign.jpeg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[5];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[5] = name;
+        component_checked(image, 5);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[5];
-        selectedConponents[5] = "";
+        component_unchecked(image, 5);
     }
 }
 
@@ -163,20 +121,10 @@ void MainWindow::on_lightsChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/lights.jpeg");
 
     if (state == Qt::Checked){
-        ui->imageLbl->setPixmap(image);
-
-        total_price += componentsPrices[6];
-
-        QString name;
-        name = ui->tiresChb->text();
-        selectedConponents[6] = name;
+        component_checked(image, 6);
     }
     else{
-        if (ui->imageLbl->pixmap().cacheKey() == image.cacheKey()){
-            ui->imageLbl->clear();
-        }
-        total_price -= componentsPrices[6];
-        selectedConponents[6] = "";
+        component_unchecked(image, 6);
     }
 }
 
