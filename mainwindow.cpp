@@ -33,14 +33,12 @@ void MainWindow::component_unchecked(QPixmap component_image, int component_inde
 }
 
 
-void MainWindow::component_checked(QPixmap component_image, int component_index){
+void MainWindow::component_checked(QPixmap component_image, int component_index, QString component_name){
     ui->imageLbl->setPixmap(component_image);
 
     total_price += componentsPrices[component_index];
 
-    QString name;
-    name = ui->tiresChb->text();
-    selectedConponents[component_index] = name;
+    selectedConponents[component_index] = component_name;
 }
 
 
@@ -48,11 +46,13 @@ void MainWindow::on_tiresChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/vidy.jpg");
 
     if (state == Qt::Checked){
-        component_checked(image, 0);
+        QString name; name = ui->tiresChb->text();
+        component_checked(image, 0, name);
     }
     else{
         component_unchecked(image, 0);
     }
+    on_resultBtn_released();
 
 }
 
@@ -61,11 +61,13 @@ void MainWindow::on_discsChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/discs.jpeg");
 
     if (state == Qt::Checked){
-        component_checked(image, 1);
+        QString name; name = ui->discsChb->text();
+        component_checked(image, 1, name);
     }
     else{
         component_unchecked(image, 1);
     }
+    on_resultBtn_released();
 }
 
 
@@ -73,11 +75,13 @@ void MainWindow::on_cascoChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/casco.jpeg");
 
     if (state == Qt::Checked){
-        component_checked(image, 2);
+        QString name; name = ui->cascoChb->text();
+        component_checked(image, 2, name);
     }
     else{
         component_unchecked(image, 2);
     }
+    on_resultBtn_released();
 }
 
 
@@ -85,11 +89,13 @@ void MainWindow::on_osagoChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/osago.png");
 
     if (state == Qt::Checked){
-        component_checked(image, 3);
+        QString name; name = ui->osagoChb->text();
+        component_checked(image, 3, name);
     }
     else{
         component_unchecked(image, 3);
     }
+    on_resultBtn_released();
 }
 
 
@@ -97,11 +103,13 @@ void MainWindow::on_condChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/cond.jpeg");
 
     if (state == Qt::Checked){
-        component_checked(image, 4);
+        QString name; name = ui->condChb->text();
+        component_checked(image, 4, name);
     }
     else{
         component_unchecked(image, 4);
     }
+    on_resultBtn_released();
 }
 
 
@@ -109,11 +117,13 @@ void MainWindow::on_signChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/sign.jpeg");
 
     if (state == Qt::Checked){
-        component_checked(image, 5);
+        QString name; name = ui->signChb->text();
+        component_checked(image, 5, name);
     }
     else{
         component_unchecked(image, 5);
     }
+    on_resultBtn_released();
 }
 
 
@@ -121,15 +131,38 @@ void MainWindow::on_lightsChb_checked(int state){
     QPixmap image("/home/ivankorolev/Изображения/lights.jpeg");
 
     if (state == Qt::Checked){
-        component_checked(image, 6);
+        QString name; name = ui->lightsChb->text();
+        component_checked(image, 6, name);
     }
     else{
         component_unchecked(image, 6);
     }
+    on_resultBtn_released();
 }
 
 
 void MainWindow::on_resultBtn_released(){
-    QString total_price_str; total_price_str.setNum(total_price);
-    ui->resultLbl->setText(total_price_str);
+
+
+    QString text_for_result;
+    int compoonent_count = 0;
+
+    for(int i = 0; i < 7; i ++){
+        if (selectedConponents[i]!=""){
+            QString price; price.setNum(componentsPrices[i]);
+            text_for_result += selectedConponents[i] + ": "+price +"\n";
+            compoonent_count += 1;
+        }
+    }
+    if (compoonent_count == 7){
+        QString total_price_str; total_price_str.setNum(total_price*0.9);
+        text_for_result += "\nИтого(скидка 10%): " + total_price_str;
+    }
+    else{
+        QString total_price_str; total_price_str.setNum(total_price);
+        text_for_result += "\nИтого: " + total_price_str;
+    }
+
+    ui->resultLbl->setText(text_for_result);
+
 }

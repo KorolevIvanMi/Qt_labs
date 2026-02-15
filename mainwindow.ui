@@ -121,48 +121,6 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>280</y>
-      <width>264</width>
-      <height>73</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QPushButton" name="resultBtn">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Расчитать результат</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="resultLbl">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>Тут будет результат</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
@@ -192,6 +150,48 @@
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resultBtn">
+    <property name="geometry">
+     <rect>
+      <x>481</x>
+      <y>281</y>
+      <width>262</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Расчитать результат</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="resultLbl">
+    <property name="geometry">
+     <rect>
+      <x>481</x>
+      <y>328</y>
+      <width>261</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Тут будет результат</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
   </widget>
