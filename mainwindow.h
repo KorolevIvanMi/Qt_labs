@@ -24,9 +24,17 @@ public:
     void on_condChb_checked(int state);
     void on_signChb_checked(int state);
     void on_lightsChb_checked(int state);
+    void on_resultBtn_released();
+
+
 
 private:
     Ui::MainWindow *ui;
+    QString selectedConponents[7];
+    int componentsPrices[7] = {
+        1000, 1500, 2000, 500, 600, 5000, 2499
+    };
+    int total_price;
 
 };
 #endif // MAINWINDOW_H
