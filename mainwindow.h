@@ -17,7 +17,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void on_tiresChb_checked(int state);
+    void on_discsChb_checked(int state);
+    void on_cascoChb_checked(int state);
+    void on_osagoChb_checked(int state);
+    void on_condChb_checked(int state);
+    void on_signChb_checked(int state);
+    void on_lightsChb_checked(int state);
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
