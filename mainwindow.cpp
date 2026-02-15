@@ -27,7 +27,9 @@ MainWindow::~MainWindow()
 void MainWindow::component_unchecked(QPixmap component_image, int component_index){
     if (ui->imageLbl->pixmap().cacheKey() == component_image.cacheKey()){
         ui->imageLbl->clear();
+        ui->picked_itemLbl->clear();
     }
+
     total_price -= componentsPrices[component_index];
     selectedConponents[component_index] = "";
 }
@@ -35,6 +37,7 @@ void MainWindow::component_unchecked(QPixmap component_image, int component_inde
 
 void MainWindow::component_checked(QPixmap component_image, int component_index, QString component_name){
     ui->imageLbl->setPixmap(component_image);
+    ui->picked_itemLbl->setText(component_name);
 
     total_price += componentsPrices[component_index];
 
@@ -43,7 +46,7 @@ void MainWindow::component_checked(QPixmap component_image, int component_index,
 
 
 void MainWindow::on_tiresChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/vidy.jpg");
+    QPixmap image(":/images/vidy.jpg");
 
     if (state == Qt::Checked){
         QString name; name = ui->tiresChb->text();
@@ -58,7 +61,7 @@ void MainWindow::on_tiresChb_checked(int state){
 
 
 void MainWindow::on_discsChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/discs.jpeg");
+    QPixmap image(":/images/discs.jpeg");
 
     if (state == Qt::Checked){
         QString name; name = ui->discsChb->text();
@@ -72,7 +75,7 @@ void MainWindow::on_discsChb_checked(int state){
 
 
 void MainWindow::on_cascoChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/casco.jpeg");
+    QPixmap image(":/images/casco.jpeg");
 
     if (state == Qt::Checked){
         QString name; name = ui->cascoChb->text();
@@ -86,7 +89,7 @@ void MainWindow::on_cascoChb_checked(int state){
 
 
 void MainWindow::on_osagoChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/osago.png");
+    QPixmap image(":/images/osago.png");
 
     if (state == Qt::Checked){
         QString name; name = ui->osagoChb->text();
@@ -100,7 +103,7 @@ void MainWindow::on_osagoChb_checked(int state){
 
 
 void MainWindow::on_condChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/cond.jpeg");
+    QPixmap image(":/images/cond.jpeg");
 
     if (state == Qt::Checked){
         QString name; name = ui->condChb->text();
@@ -114,7 +117,7 @@ void MainWindow::on_condChb_checked(int state){
 
 
 void MainWindow::on_signChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/sign.jpeg");
+    QPixmap image(":/images/sign.jpeg");
 
     if (state == Qt::Checked){
         QString name; name = ui->signChb->text();
@@ -128,7 +131,7 @@ void MainWindow::on_signChb_checked(int state){
 
 
 void MainWindow::on_lightsChb_checked(int state){
-    QPixmap image("/home/ivankorolev/Изображения/lights.jpeg");
+    QPixmap image(":/images/lights.jpeg");
 
     if (state == Qt::Checked){
         QString name; name = ui->lightsChb->text();

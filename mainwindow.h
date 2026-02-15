@@ -36,7 +36,7 @@ private:
     int componentsPrices[7] = {
         1000, 1500, 2000, 500, 600, 5000, 2499
     };
-    int total_price;
+    int total_price = 20000;
 
 };
 #endif // MAINWINDOW_H
