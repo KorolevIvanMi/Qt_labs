@@ -147,7 +147,7 @@ void MainWindow::on_lightsChb_checked(int state){
 void MainWindow::on_resultBtn_released(){
 
 
-    QString text_for_result;
+    QString text_for_result = "Лада гранта: 20000\n";
     int compoonent_count = 0;
 
     for(int i = 0; i < 7; i ++){
@@ -159,7 +159,7 @@ void MainWindow::on_resultBtn_released(){
     }
     if (compoonent_count == 7){
         QString total_price_str; total_price_str.setNum(total_price*0.9);
-        text_for_result += "\nИтого(скидка 10%): " + total_price_str;
+        text_for_result += "\nСкидка: 10%\nИтого: " + total_price_str;
     }
     else{
         QString total_price_str; total_price_str.setNum(total_price);
