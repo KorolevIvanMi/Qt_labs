@@ -19,5 +19,21 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString materials[6] = {
+        "Глянцевый",
+        "Матовый" ,
+        "Сатиновый",
+        "Тканевый",
+        "Тенсограй",
+        "Звёздное небо"
+    };
+    int material_prices[6]={
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000
+    };
 };
 #endif // MAINWINDOW_H

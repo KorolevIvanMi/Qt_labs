@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    for(int i = 0 ; i < 6; i++){
+        ui->materialCmb->addItem(materials[i]);
+    }
 }
 
 MainWindow::~MainWindow()
