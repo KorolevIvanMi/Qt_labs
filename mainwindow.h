@@ -17,6 +17,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    double count_s(double, double);
+    double count_price(double, double);
+    bool is_empty();
+
+
+private slots:
+    void resultBtn_released();
+    void material_changed(int material_index);
+    void paramTxt_changed();
+
+
+
 private:
     Ui::MainWindow *ui;
     QString materials[6] = {
