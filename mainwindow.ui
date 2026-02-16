@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>750</height>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -202,7 +202,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>250</x>
       <y>260</y>
       <width>261</width>
       <height>41</height>
@@ -220,9 +220,9 @@
    <widget class="QLabel" name="resultLbl">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>230</x>
       <y>330</y>
-      <width>311</width>
+      <width>371</width>
       <height>201</height>
      </rect>
     </property>
