@@ -20,6 +20,7 @@ public:
     double count_s(double, double);
     double count_price(double, double);
     bool is_empty();
+    QString get_material_by_id(int);
 
 
 private slots:

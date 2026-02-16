@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     for(int i = 0 ; i < 6; i++){
         ui->materialCmb->addItem(materials[i]);
     }
+    ui->materialPriceTxt->setReadOnly(true);
 }
 
 MainWindow::~MainWindow()
@@ -27,8 +28,10 @@ bool MainWindow::is_empty(){
     if(height == "" or height == " " or length == "" or length == " "){
         return false;
     }
+
     return true;
 }
+
 
 void MainWindow::paramTxt_changed(){
     ui->resultLbl->clear();
@@ -61,16 +64,35 @@ void MainWindow::material_changed(int material_index){
 }
 
 
+QString MainWindow::get_material_by_id(int materail_id){
+    return materials[materail_id];
+}
+
+
 void MainWindow::resultBtn_released(){
     double height = ui->heightTxt->text().toDouble();
     double length = ui->lengthTxt->text().toDouble();
-    int materail_price = ui->materialPriceTxt->text().toInt();
+    int material_price = ui->materialPriceTxt->text().toInt();
+    int material_index = ui->materialCmb->currentIndex();
+
 
     double s = count_s(height, length);
-    double total_price = count_price(s, materail_price);
+    double total_price = count_price(s, material_price);
+
 
     QString total_price_str; total_price_str.setNum(total_price);
+    QString s_str; s_str.setNum(s);
+    QString material_price_str; material_price_str.setNum(material_price);
+    QString material_name = get_material_by_id(material_index);
 
-    ui->resultLbl->setText(total_price_str);
+    QString result_txt  =
+        "Длина: " + ui->heightTxt->text() +
+        "\nШирина: " + ui->lengthTxt->text() +
+        "\nПлощадь: " + s_str+
+        "\nМатериал: " + material_name +
+        "\nЦена материала: " + material_price_str+
+        "\nИтого: " + total_price_str;
+
+    ui->resultLbl->setText(result_txt);
 }
 

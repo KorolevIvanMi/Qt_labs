@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,8 +35,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>164</y>
+      <x>149</x>
+      <y>66</y>
       <width>473</width>
       <height>183</height>
      </rect>
@@ -196,44 +196,44 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QPushButton" name="resultBtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>380</y>
-      <width>361</width>
-      <height>82</height>
+      <x>240</x>
+      <y>260</y>
+      <width>261</width>
+      <height>41</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <widget class="QPushButton" name="resultBtn">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Расчитать </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="resultLbl">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Расчитать </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="resultLbl">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>330</y>
+      <width>311</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
