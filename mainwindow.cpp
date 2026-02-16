@@ -157,11 +157,18 @@ void MainWindow::on_resultBtn_released(){
             compoonent_count += 1;
         }
     }
+    QString total_price_comp_str;
+
     if (compoonent_count == 7){
-        QString total_price_str; total_price_str.setNum(total_price*0.9);
+        total_price_comp_str.setNum((total_price-20000)*0.9);
+        text_for_result += "\nКомплектующие: " + total_price_comp_str;
+        QString total_price_str; total_price_str.setNum(total_price);
         text_for_result += "\nСкидка: 10%\nИтого: " + total_price_str;
+
     }
     else{
+        total_price_comp_str.setNum(total_price-20000);
+        text_for_result += "\nКомплектующие: " + total_price_comp_str;
         QString total_price_str; total_price_str.setNum(total_price);
         text_for_result += "\nИтого: " + total_price_str;
     }
