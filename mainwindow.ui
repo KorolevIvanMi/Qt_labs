@@ -32,13 +32,13 @@
      <string>Катушка и оснащение</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>100</y>
-      <width>349</width>
-      <height>356</height>
+      <width>463</width>
+      <height>445</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -89,7 +89,7 @@
                </font>
               </property>
               <property name="text">
-               <string>RadioButton</string>
+               <string>RadioButtons</string>
               </property>
              </widget>
             </item>
@@ -268,13 +268,13 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>510</x>
       <y>100</y>
       <width>180</width>
-      <height>136</height>
+      <height>174</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -305,6 +305,18 @@
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QPushButton" name="resultBtn">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Расчитать</string>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QLabel" name="resultLbl">
          <property name="font">

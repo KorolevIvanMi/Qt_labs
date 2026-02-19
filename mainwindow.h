@@ -17,6 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void SetupData();
+
 private:
     Ui::MainWindow *ui;
     QString seasons[2] = {
@@ -38,6 +40,6 @@ private:
         0.15,
         0.2,
         0.25
-    }
+    };
 };
 #endif // MAINWINDOW_H
