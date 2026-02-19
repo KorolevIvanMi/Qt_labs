@@ -11,9 +11,329 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Королев Иван Михайлович 4431</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="headLbl">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>301</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Катушка и оснащение</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>349</width>
+      <height>356</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <item>
+        <widget class="QGroupBox" name="rod_typeGb">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Тип катушки</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QRadioButton" name="type1Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="type2Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="type3Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="seasonGb">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Сезон</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QRadioButton" name="season1Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="season2Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <item>
+        <widget class="QGroupBox" name="fishing_line_typeGb">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Тип лески</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QRadioButton" name="line_type1Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="line_type2Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="line_type3Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="fishing_line_diametrGb">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Диаметр лески</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QRadioButton" name="diametr1Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="diametr2Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="diametr3Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="diametr4Rb">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>RadioButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>100</y>
+      <width>180</width>
+      <height>136</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_14">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <item>
+        <widget class="QLabel" name="metersLbl">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Метров лески:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="metersTxt">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="resultLbl">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>К оплате</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="resultTxt">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>

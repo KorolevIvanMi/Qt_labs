@@ -19,5 +19,25 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QString seasons[2] = {
+        "Зима",
+        "Лето"
+    };
+    QString rods_types[3] = {
+        "Инерционная",
+        "Безынерционная",
+        "Мультипликаторная"
+    };
+    QString line_types[3] = {
+        "Монофильная",
+        "Плетёная",
+        "Флюрокарбон"
+    };
+    float line_diametr[4] = {
+        0.1,
+        0.15,
+        0.2,
+        0.25
+    }
 };
 #endif // MAINWINDOW_H

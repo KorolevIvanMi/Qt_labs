@@ -6,6 +6,12 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QList<QRadioButton*> season_childrens = ui->seasonGb->findChildren<QRadioButton*>();
+    int season_name_index = 0;
+    foreach (QRadioButton* season_radio, season_childrens) {
+        season_radio->setText(seasons[season_name_index]);
+        season_name_index ++;
+    }
 }
 
 MainWindow::~MainWindow()
