@@ -24,6 +24,7 @@ void MainWindow::SetupData(){
     int season_name_index = 0;
     foreach (QRadioButton* season_radio, season_childrens) {
         season_radio->setText(seasons[season_name_index++]);
+        connect(season_radio, &QRadioButton::clicked, this, &MainWindow::on_radio_clicked());
     }
 
     int rods_type_index = 0;

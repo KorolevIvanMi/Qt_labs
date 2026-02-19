@@ -41,5 +41,8 @@ private:
         0.2,
         0.25
     };
+
+private slots:
+    void on_groubBox_clicked();
 };
 #endif // MAINWINDOW_H
