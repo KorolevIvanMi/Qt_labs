@@ -62,5 +62,6 @@ private:
 private slots:
     void radio_clicked();
     void result_btn_clicked();
+    void meters_changed();
 };
 #endif // MAINWINDOW_H

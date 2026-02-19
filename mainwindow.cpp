@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     SetupData();
     connect(ui->resultBtn, &QPushButton::clicked, this, &MainWindow::result_btn_clicked);
+    connect(ui->metersTxt, &QLineEdit::textChanged, this, &MainWindow::meters_changed);
 
 }
 
@@ -81,7 +82,7 @@ void MainWindow::result_btn_clicked(){
     QString summa_str; summa_str.setNum(summa);
     QString meters_price_str; meters_price_str.setNum(meters_price);
     QString result_txt =
-        "Итоговая сумма: \nСезон:" + active_season->text() + "\nцена: " + season_price_str +
+        "Выбрали: \nСезон:" + active_season->text() + "\nцена: " + season_price_str +
         "\nТип катушки: " + active_rod_type->text() + "\nцена: " + rod_type_str +
         "\nТип лески: " + active_line->text() + "\nцена: " + line_str +
         "\nДиаметр лески: " + active_diametr->text() + "\nцена: " + diametr_str +
@@ -113,4 +114,14 @@ int MainWindow::find_price_by_name(QString name ,QString array[], int prices[], 
         }
     }
     return res_price;
+}
+
+void MainWindow::meters_changed(){
+    ui->result_sumLbl->clear();
+    if(ui->metersTxt->text() == ""){
+        ui->resultBtn->setEnabled(false);
+    }
+    else{
+        ui->resultBtn->setEnabled(true);
+    }
 }
