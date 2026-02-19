@@ -71,7 +71,17 @@ void MainWindow::result_btn_clicked(){
     int diametr = find_price_by_name(active_diametr->text(), line_diametr, line_diametr_price, 4);
     QString diametr_str; diametr_str.setNum(diametr);
 
-    QString result_txt = "итоговая сумма: \n Сезон:" + active_diametr->text() ;
+    int summa = season_price + rod_type + line + diametr;
+    QString summa_str; summa_str.setNum(summa);
+
+    QString result_txt =
+        "Итоговая сумма: \nСезон:" + active_season->text() + "\nцена: " + season_price_str +
+        "\nТип катушки: " + active_rod_type->text() + "\nцена: " + rod_type_str +
+        "\nТип лески: " + active_line->text() + "\nцена: " + line_str +
+        "\nДиаметр лески: " + active_diametr->text() + "\nцена: " + diametr_str +
+        "\nИтого: " + summa_str;
+
+    ui->result_sumLbl->setText(result_txt);
 
 
 
