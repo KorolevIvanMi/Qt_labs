@@ -72,13 +72,20 @@ void MainWindow::result_btn_clicked(){
     QString diametr_str; diametr_str.setNum(diametr);
 
     int summa = season_price + rod_type + line + diametr;
-    QString summa_str; summa_str.setNum(summa);
 
+
+    int meters = ui->metersTxt->text().toInt();
+    int meters_price = meters*(line + diametr);
+    summa += meters_price;
+
+    QString summa_str; summa_str.setNum(summa);
+    QString meters_price_str; meters_price_str.setNum(meters_price);
     QString result_txt =
         "Итоговая сумма: \nСезон:" + active_season->text() + "\nцена: " + season_price_str +
         "\nТип катушки: " + active_rod_type->text() + "\nцена: " + rod_type_str +
         "\nТип лески: " + active_line->text() + "\nцена: " + line_str +
         "\nДиаметр лески: " + active_diametr->text() + "\nцена: " + diametr_str +
+        "\nЦена длины: " + meters_price_str +
         "\nИтого: " + summa_str;
 
     ui->result_sumLbl->setText(result_txt);
