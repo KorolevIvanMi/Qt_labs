@@ -341,21 +341,27 @@
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLineEdit" name="resultTxt">
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-          </font>
-         </property>
-         <property name="readOnly">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="result_sumLbl">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>280</y>
+      <width>176</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
