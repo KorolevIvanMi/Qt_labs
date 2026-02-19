@@ -71,6 +71,8 @@ void MainWindow::result_btn_clicked(){
     int diametr = find_price_by_name(active_diametr->text(), line_diametr, line_diametr_price, 4);
     QString diametr_str; diametr_str.setNum(diametr);
 
+    QString result_txt = "итоговая сумма: \n" +
+        "Сезон:";
 
 
 
