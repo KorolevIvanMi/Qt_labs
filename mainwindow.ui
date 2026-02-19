@@ -67,6 +67,9 @@
               <property name="text">
                <string>RadioButton</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item>
@@ -121,6 +124,9 @@
               <property name="text">
                <string>RadioButton</string>
               </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item>
@@ -166,6 +172,9 @@
               </property>
               <property name="text">
                <string>RadioButton</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -220,6 +229,9 @@
               </property>
               <property name="text">
                <string>RadioButton</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
