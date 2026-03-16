@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "mylist.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    myList* collection = new myList({10,2,3,4,5,6,7,8,9});
+
+
+private slots:
+    void show_by_index_released();
 };
 #endif // MAINWINDOW_H
