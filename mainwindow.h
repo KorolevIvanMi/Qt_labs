@@ -36,5 +36,6 @@ private slots:
     void save_data_to_file();
     void clear_collection_released();
     void task1();
+    void task2();
 };
 #endif // MAINWINDOW_H

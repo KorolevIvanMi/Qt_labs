@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->saveToFileBtn, &QPushButton::released, this, &MainWindow::save_data_to_file);
     connect(ui->clearColletionBtn, &QPushButton::released, this, &MainWindow::clear_collection_released);
     connect(ui->task1Btn, &QPushButton::released, this, &MainWindow::task1);
+    connect(ui->task2Btn, &QPushButton::released, this, &MainWindow::task2);
 }
 
 MainWindow::~MainWindow()
@@ -95,4 +96,10 @@ void MainWindow::task1(){
     collection->task1();
     QString text = collection->get_all_data_in_column();
     ui->endCollectionTxt->setText(text);
+}
+
+void MainWindow::task2(){
+    int summa = collection->task2();
+    QString val; val.setNum(summa);
+    ui->endCollectionTxt->setText(val);
 }

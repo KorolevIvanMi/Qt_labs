@@ -138,5 +138,15 @@ bool myList::task1(){
 }
 
 int myList::task2(){
-    return 1;
+    bool flag = false;
+    int summa = 0;
+    for (int i =0 ; i < collection.size(); i ++){
+        if (collection.at(i) < 0){
+            flag = true;
+        }
+        if (flag == true){
+            summa +=  abs(collection.at(i));
+        }
+    }
+    return summa;
 }
