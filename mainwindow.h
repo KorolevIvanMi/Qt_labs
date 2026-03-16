@@ -22,7 +22,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    myList* collection = new myList({10,2,3,4,5,6,7,8,9});
+    myList* collection = new myList({1,2,3,4,5,6,7,8,9,10});
 
 
 private slots:
@@ -32,5 +32,9 @@ private slots:
     void add_element_to_end_released();
     void summ_element_released();
     void summ_chet_element_released();
+    void read_data_from_file();
+    void save_data_to_file();
+    void clear_collection_released();
+    void task1();
 };
 #endif // MAINWINDOW_H

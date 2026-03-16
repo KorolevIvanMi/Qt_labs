@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     QString text = collection->get_all_data_in_column();
     ui->startCollectionTxt->setText(text);
     connect(ui->showByIndexBtn, &QPushButton::released, this, &MainWindow::show_by_index_released);
@@ -16,6 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->addElementBtn, &QPushButton::released, this, &MainWindow::add_element_to_end_released);
     connect(ui->summElementBtn, &QPushButton::released, this, &MainWindow::summ_element_released);
     connect(ui->summChetElementBtn, &QPushButton::released, this, &MainWindow::summ_chet_element_released);
+    connect(ui->readFromFileBtn, &QPushButton::released, this, &MainWindow::read_data_from_file);
+    connect(ui->saveToFileBtn, &QPushButton::released, this, &MainWindow::save_data_to_file);
+    connect(ui->clearColletionBtn, &QPushButton::released, this, &MainWindow::clear_collection_released);
+    connect(ui->task1Btn, &QPushButton::released, this, &MainWindow::task1);
 }
 
 MainWindow::~MainWindow()
@@ -62,4 +67,32 @@ void MainWindow::summ_chet_element_released(){
     int summa = collection->summ_chet_element();
     QString val; val.setNum(summa);
     ui->summTxt->setText(val);
+}
+
+void MainWindow::read_data_from_file(){
+    myList* new_collection = new myList();
+    new_collection->read_from_file("/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/collection.txt");
+    delete collection;
+    collection = new_collection;
+
+
+    QString text = collection->get_all_data_in_column();
+    ui->startCollectionTxt->setText(text);
+}
+
+void MainWindow::save_data_to_file(){
+    collection->save_to_file("/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/collection.txt");
+}
+
+void MainWindow::clear_collection_released(){
+    collection->clear_collection();
+
+    QString text = collection->get_all_data_in_column();
+    ui->startCollectionTxt->setText(text);
+}
+
+void MainWindow::task1(){
+    collection->task1();
+    QString text = collection->get_all_data_in_column();
+    ui->endCollectionTxt->setText(text);
 }
