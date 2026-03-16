@@ -9,13 +9,16 @@ public:
     myList();
     myList(QList<int>);
 
-    int get_element_by_index(int index = 0);
-    // bool delete_element_by_index(int index = 0);
-    // bool delete_element_by_value(int value = 0);
+    int get_size();
+    QString get_all_data_in_column();
 
-    // bool add_element_to_end(int value = 0);
-    // int summ_element();
-    // int summ_chet_element();
+    int get_element_by_index(int index = 0);
+    void delete_element_by_index(int index = 0);
+    void delete_element_by_value(int value = 0);
+
+    void add_element_to_end(int value = 0);
+    int summ_element();
+    int summ_chet_element();
 
     // bool read_from_file(QString);
     // bool save_to_file(QString);

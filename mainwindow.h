@@ -27,5 +27,10 @@ private:
 
 private slots:
     void show_by_index_released();
+    void delete_by_index_released();
+    void delete_by_value_released();
+    void add_element_to_end_released();
+    void summ_element_released();
+    void summ_chet_element_released();
 };
 #endif // MAINWINDOW_H
