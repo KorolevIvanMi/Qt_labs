@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Lada.jpeg</file>
+        <file>casco.jpeg</file>
+        <file>cond.jpeg</file>
+        <file>discs.jpeg</file>
+        <file>lights.jpeg</file>
+        <file>osago.png</file>
+        <file>sign.jpeg</file>
+        <file>vidy.jpg</file>
+    </qresource>
+</RCC>
