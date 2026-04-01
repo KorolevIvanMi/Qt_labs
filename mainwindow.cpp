@@ -72,17 +72,22 @@ void MainWindow::summ_chet_element_released(){
 
 void MainWindow::read_data_from_file(){
     myList* new_collection = new myList();
-    new_collection->read_from_file("/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/collection.txt");
+    QString filename = ui->fileNameTxt->text();
+    filename = "/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/" + filename;
+    new_collection->read_from_file(filename);
     delete collection;
     collection = new_collection;
 
 
     QString text = collection->get_all_data_in_column();
     ui->startCollectionTxt->setText(text);
+    ui->endCollectionTxt->clear();
 }
 
 void MainWindow::save_data_to_file(){
-    collection->save_to_file("/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/collection.txt");
+    QString filename = ui->fileNameTxt->text();
+    filename = "/home/ivankorolev/MyProjects/For_study/OOP_Qt_Labs/" + filename;
+    collection->save_to_file(filename);
 }
 
 void MainWindow::clear_collection_released(){
