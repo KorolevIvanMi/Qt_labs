@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "states.h"
+#include "estate.h"
+#include "calculationfacade.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -14,10 +17,21 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private:
     Ui::MainWindow *ui;
+    States info;
+
+public slots:
+    void update();
+private slots:
+    void btnCalcPressed();
+    void btnUndoPressed();
+private:
+    Estate* processForm();
+    void fillForm(Estate* value);
+    void showCost(Estate* value);
 };
 #endif // MAINWINDOW_H

@@ -23,6 +23,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(OOP_Qt_Labs
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        estate.h estate.cpp
+        states.h states.cpp
+        apartmentcalc.h apartmentcalc.cpp
+        luxuriousapartmentcalc.h luxuriousapartmentcalc.cpp
+        townhousecalc.h townhousecalc.cpp
+        cottagecalc.h cottagecalc.cpp
+        calculationfacade.h calculationfacade.cpp
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET OOP_Qt_Labs APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
