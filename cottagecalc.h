@@ -1,12 +1,11 @@
 #ifndef COTTAGECALC_H
 #define COTTAGECALC_H
 
-#include "estate.h"
+#include "AbstractCalc.h"
 
-class CottageCalc
-{
+class CottageCalc:public AbstractCalc {
 public:
-    static int getCost(Estate *value);
+    int getCost(Estate *value) override;  // больше не static
 };
 
 #endif // COTTAGECALC_H

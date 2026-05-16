@@ -23,6 +23,7 @@ public:
 private:
     Ui::MainWindow *ui;
     States info;
+    CalculationFacade m_facade;
 
 public slots:
     void update();

@@ -1,12 +1,11 @@
 #ifndef LUXURIOUSAPARTMENTCALC_H
 #define LUXURIOUSAPARTMENTCALC_H
 
-#include "estate.h"
+#include "AbstractCalc.h"
 
-class LuxuriousApartmentCalc
-{
+class LuxuriousApartmentCalc:public AbstractCalc {
 public:
-    static int getCost(Estate *value);
+    int getCost(Estate *value) override;  // больше не static
 };
 
 #endif // LUXURIOUSAPARTMENTCALC_H

@@ -1,12 +1,11 @@
 #ifndef TOWNHOUSECALC_H
 #define TOWNHOUSECALC_H
 
-#include "estate.h"
+#include "AbstractCalc.h"
 
-class TownhouseCalc
-{
+class TownhouseCalc:public AbstractCalc {
 public:
-    static int getCost(Estate *value);
+    int getCost(Estate *value) override;  // больше не static
 };
 
 #endif // TOWNHOUSECALC_H

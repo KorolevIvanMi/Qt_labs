@@ -30,6 +30,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         townhousecalc.h townhousecalc.cpp
         cottagecalc.h cottagecalc.cpp
         calculationfacade.h calculationfacade.cpp
+        AbstractCalc.h
+        CalcFactory.h
+        apartmentcalcfactory.h
+        cottagecalcfactory.h
+        luxuriousapartmentcalcfactory.h
+        townhousecalcfactory.h
 
 
     )

@@ -4,6 +4,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , m_facade()
 {
     ui->setupUi(this);
     ui->btnUndo->setEnabled(false);
@@ -158,7 +159,7 @@ void MainWindow::showCost(Estate *value){
     }
 
     // Вызываем фасад для расчета стоимости страховки
-    int cost = CalculationFacade::getCost(value);
+    int cost = m_facade.getCost(value);
 
     // Проверяем корректность расчета
     if (cost < 0) {

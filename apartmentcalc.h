@@ -1,13 +1,11 @@
 #ifndef APARTMENTCALC_H
 #define APARTMENTCALC_H
 
-#include "estate.h"
+#include "AbstractCalc.h"
 
-class ApartmentCalc
-{
+class ApartmentCalc:public AbstractCalc {
 public:
-    // Статический метод для расчета стоимости страховки
-    static int getCost(Estate *value);
+    int getCost(Estate *value) override;  // больше не static
 };
 
 #endif // APARTMENTCALC_H
